@@ -1,0 +1,538 @@
+/* HosurBava Professional Website Styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse-custom {
+  animation: pulse 2s infinite;
+}
+
+/* Custom gradient backgrounds */
+.gradient-brand {
+  background: linear-gradient(135deg, #1e40af, #3b82f6, #f59e0b);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(59, 130, 246, 0.95), rgba(245, 158, 11, 0.95));
+}
+
+/* Hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button hover effects */
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3);
+}
+
+/* Social media platform colors */
+.instagram-gradient {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.youtube-gradient {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+
+.facebook-gradient {
+  background: linear-gradient(45deg, #1877f2, #42a5f5);
+}
+
+.whatsapp-gradient {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+}
+
+/* Navigation sticky effect */
+.nav-sticky {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Loading animation for forms */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Text shadows for better readability */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile menu animations */
+.mobile-menu-enter {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-menu-enter.active {
+  max-height: 300px;
+}
+
+/* Service card animations */
+.service-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+/* Testimonial styles */
+.testimonial {
+  position: relative;
+}
+
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 4rem;
+  color: #f59e0b;
+  font-family: serif;
+  opacity: 0.3;
+}
+
+/* Contact form focus effects */
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Statistics counter animation */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Brand logo glow effect */
+.logo-glow {
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.3));
+}
+
+/* Hero section parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-text {
+    font-size: 2rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card-hover:hover {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-card {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+}
+
+/* ===== SLIDESHOW STYLES ===== */
+
+/* Hero slideshow container */
+#hero-slideshow {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Individual slides */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.hero-slide.prev {
+  transform: translateX(-100%);
+}
+
+/* Slide content animations */
+.hero-slide .animate-slide-in-left {
+  animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+.hero-slide .animate-slide-in-right {
+  animation: slideInRight 1s ease-out 0.5s both;
+}
+
+.hero-slide:not(.active) .animate-slide-in-left,
+.hero-slide:not(.active) .animate-slide-in-right {
+  animation: none;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Slide navigation dots */
+.slide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slide-dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.slide-dot.active {
+  background-color: white;
+  transform: scale(1.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Slide control buttons */
+#prev-slide,
+#next-slide {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+#prev-slide:hover,
+#next-slide:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* Slide-specific gradient backgrounds */
+.instagram-gradient {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+}
+
+.youtube-gradient {
+  background: linear-gradient(45deg, #ff0000, #cc0000, #990000);
+}
+
+.facebook-gradient {
+  background: linear-gradient(45deg, #1877f2, #42a5f5, #64b5f6);
+}
+
+/* Slideshow pause on hover */
+#hero-slideshow:hover .hero-slide {
+  animation-play-state: paused;
+}
+
+/* Auto-play progress indicator */
+.slide-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #3b82f6);
+  transform-origin: left;
+  animation: slideProgress 5s linear infinite;
+  z-index: 10;
+}
+
+@keyframes slideProgress {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* Slide transition effects */
+.slide-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.slide-fade-out {
+  animation: fadeOut 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* Content entrance animations for each slide */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for slideshow */
+@media (max-width: 768px) {
+  .hero-slide h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-slide p {
+    font-size: 1.1rem;
+  }
+  
+  .slide-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  #prev-slide,
+  #next-slide {
+    padding: 0.75rem;
+  }
+  
+  #prev-slide i,
+  #next-slide i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-slide h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-slide .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  #prev-slide {
+    left: 1rem;
+  }
+  
+  #next-slide {
+    right: 1rem;
+  }
+}
+
+/* Enhanced button hover effects for slides */
+.hero-slide a.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved text shadow for better readability */
+.text-shadow {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide content loading states */
+.hero-slide .loading-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.hero-slide.active .loading-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced card hover effects in slides */
+.hero-slide .card-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}

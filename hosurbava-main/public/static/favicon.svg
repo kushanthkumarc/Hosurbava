@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#1e40af"/>
+  
+  <!-- Mobile phone icon -->
+  <rect x="11" y="8" width="10" height="16" rx="2" fill="#ffffff"/>
+  <rect x="12" y="10" width="8" height="10" fill="#1e40af"/>
+  <circle cx="16" cy="22" r="1" fill="#1e40af"/>
+  
+  <!-- Signal bars -->
+  <rect x="6" y="22" width="2" height="4" fill="#f59e0b"/>
+  <rect x="6" y="20" width="2" height="2" fill="#f59e0b" opacity="0.5"/>
+  
+  <rect x="24" y="20" width="2" height="6" fill="#f59e0b"/>
+  <rect x="24" y="18" width="2" height="2" fill="#f59e0b" opacity="0.5"/>
+</svg>
